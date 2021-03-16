@@ -1,0 +1,30 @@
+<div *ngFor="let comment of thiscomments">
+  <div class="py-2">
+    <a [routerLink]="comment.postedBy?._id===signUser?._id ? '/my-profile':'/profile/'+comment.postedBy?._id"
+      class="mr-3 commenter">{{comment.postedBy?.name}}</a>
+    <span class="mat-body-1">
+      {{comment.text}}
+    </span>
+    <button class="py-2" *ngIf="comment.postedBy?._id===signUser?._id" mat-icon-button [matMenuTriggerFor]="menu"
+      aria-label="more">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>delete</mat-icon>
+        <span>Delete</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>edit</mat-icon>
+        <span>Edit</span>
+      </button>
+    </mat-menu>
+  </div>
+</div>
+<mat-divider [inset]="true"></mat-divider>
+<form [formGroup]="form" (ngSubmit)="onComment(p._id)">
+  <mat-form-field class="example-full-width">
+    <mat-label>Leave a comment</mat-label>
+    <input matInput #cmt name="text" formControlName="text" mat-matInput>
+  </mat-form-field>
+</form>

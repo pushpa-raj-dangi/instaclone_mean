@@ -1,0 +1,11 @@
+<div mat-dialog-content>
+  <div>
+    <mat-card-header class="align-center mb-2" *ngFor="let d of data">
+      <div mat-card-avatar class="liker-img" [style.background]="'url(' +'assets/img/default.png'+ ')'"></div>
+      <mat-card-title>
+        <a (click)="onclose()" [routerLink]="d._id===loggedInd._id ? '/my-profile':'/profile/'+d._id" class="mr-3 commenter">{{d.name}}</a>
+      </mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+  </div>
+</div>

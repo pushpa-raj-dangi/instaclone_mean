@@ -1,0 +1,14 @@
+.profile-img{
+  background-size: cover !important;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin-right: 100px;
+}
+
+
+
+
+.grid{
+  margin-top: 60px;
+}

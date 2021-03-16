@@ -1,0 +1,55 @@
+<div class="card">
+  <mat-card class="my-card">
+    <div *ngIf="error">{{error}}</div>
+    <div class="flex-1 d-flex space-between align-center">
+      <mat-card-header class="align-center mb-2">
+        <div mat-card-avatar class="example-header-image" [style.background]="'url(' +p.photo+ ')'"></div>
+        <mat-card-title> <a
+            [routerLink]="p.postedBy?._id === signUser?._id ? '/my-profile': '/profile/'+[p.postedBy?._id]">{{p.postedBy?.name}}</a>
+        </mat-card-title>
+        <mat-card-subtitle>{{p.postedBy?.name}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-header>
+        <div *ngIf="p.postedBy?._id===signUser._id">
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="more">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button (click)="delete(p._id)" mat-menu-item>
+              <mat-icon>delete</mat-icon>
+              <span>Delete</span>
+            </button>
+            <button  mat-menu-item>
+              <mat-icon>edit</mat-icon>
+              <span>Edit</span>
+            </button>
+          </mat-menu>
+        </div>
+      </mat-card-header>
+    </div>
+    <img mat-card-image [src]="p.photo" [alt]="p.title">
+    <mat-card-content>
+      <p *ngIf="!editMode">
+        {{p.title}}
+      </p>
+      <mat-form-field class="example-full-width" *ngIf="editMode">
+        <input type="text" #title name="title" [value]="p.title" matInput>
+      </mat-form-field>
+    </mat-card-content>
+    <div>
+
+      <app-like [p]="p"></app-like>
+      <button mat-button>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" color="primary">share</mat-icon> share
+      </button>
+
+      <a mat-button [routerLink]="'/comment/'+p._id" class="mr-3 commenter">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" color="primary">mode_comment</mat-icon>
+        {{p.comments.length}} comments
+      </a>
+    </div>
+    <mat-card-footer>
+      <app-comments [p]="p" [comments]="comments"></app-comments>
+    </mat-card-footer>
+  </mat-card>
+</div>

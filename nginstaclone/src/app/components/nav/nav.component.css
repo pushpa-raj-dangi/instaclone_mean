@@ -1,0 +1,22 @@
+.col {
+  width: 25%;
+}
+
+.border-radius {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.header-image {
+  background-size: cover !important;
+  border: 3px solid #dddddd;
+}
+
+
+.option-img {
+  background-size: cover !important;
+  height: 25px;
+  border-radius: 50%;
+  width: 25px;
+}

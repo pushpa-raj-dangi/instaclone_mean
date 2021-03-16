@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="box m-auto">
+    <form [formGroup]="form" class="ml-auto" (ngSubmit)="login()">
+      <div class="logo">InstaClone</div>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" name="email" matInput>
+        <mat-error *ngIf="form.get('email').invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input formControlName="password" name="password" matInput [type]="hide ? 'password' : 'text'">
+        <mat-error *ngIf="form.get('password').invalid">Password is required.
+        </mat-error>
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <div class="my-2 text-center">
+        <button mat-raised-button color="primary" [disabled]="form.invalid">Login</button>
+      </div>
+      <h4 class="link">
+        Dont't have account?
+        <br>
+        <a class="signup-link" color="primary" routerLink="/signup">
+          signup
+        </a>
+      </h4>
+    </form>
+  </div>
+</div>
+
+

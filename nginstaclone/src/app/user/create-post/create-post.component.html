@@ -1,0 +1,27 @@
+<div class="create-card">
+  <form class="example-form" [formGroup]="d">
+    <mat-form-field class="example-full-width">
+      <mat-label>What's on your mind ? </mat-label>
+      <input matInput name="title" formControlName="title" placeholder="Write Something">
+      <mat-error *ngIf="d.get('title').invalid">Title is required.</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-divider></mat-divider>
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <textarea name="body" formControlName="body" matInput placeholder="Write Something..."></textarea>
+    </mat-form-field>
+    <mat-spinner *ngIf="loder"></mat-spinner>
+    <img  height="200" src="{{this.url}}"  alt="">
+    <div class="d-flex space-between">
+      <button mat-raised-button>
+        <mat-icon>insert_photo</mat-icon>upload photo
+        <input type="file"  (change)="upload($event)" >
+      </button>
+      <div>
+        <button mat-raised-button style="margin-right: 24px;" (click)="twoEvent()" color="primary" [disabled]="d.get('title').invalid">Save</button>
+        <button mat-raised-button (click)="close()" color="warn">Discard</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,30 @@
+<!-- (click)="following? onFollowing(user._id) : unFollowing(user._id)" -->
+<div class="container">
+  <div class="d-flex">
+    <div class="profile-img mr-3"
+      [style.background]="user ? 'url('+'assets/img/1.jpg'+')':'url('+'assets/img/default.png'+')'">
+    </div>
+    <div class="" *ngIf="user">
+      <h1 class="mat-title">
+        {{user.name}}
+        <app-follow [user]="user" [posts]="posts"></app-follow>
+      </h1>
+    </div>
+  </div>
+  <div class="navigation">
+    <!-- {{user | json}} -->
+    <div class=" my-2 d-flex align-center">
+      <div color="secondary" class="mat-subtitle my-2 d-flex align-center" style="margin-right: 20px;">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" color="primary">grid_on</mat-icon>
+        &nbsp; POSTS
+      </div>
+      <div color="secondary" class="mat-subtitle my-2 d-flex align-center">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" color="primary">live_tv</mat-icon>
+        &nbsp;IGTV
+      </div>
+    </div>
+    <hr class="my-2">
+  </div>
+  <mat-card-title class="mat-sub-heading">More post from  {{user?.name}}</mat-card-title>
+  <app-grid [posts]="posts"></app-grid>
+</div>

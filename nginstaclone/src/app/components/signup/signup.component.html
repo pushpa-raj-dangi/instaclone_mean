@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="box m-auto">
+    <form [formGroup]="form"  (ngSubmit)="signup()" class="ml-auto">
+      <div class="logo">Instagram</div>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter name</mat-label>
+        <input matInput formControlName="name">
+        <mat-error *ngIf="name.invalid">{{getUserError()}}</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter email</mat-label>
+        <input name="email" formControlName="email" matInput>
+        <mat-error *ngIf="email.invalid">{{getEmailError()}}</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input name="password" formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+        <mat-error *ngIf="password.invalid">{{getPasswordError()}}</mat-error>
+
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <div class="text-center">
+        <button  mat-raised-button color="primary" [disabled]="!form.valid">Signup</button>
+      </div>
+      <h4 class="link">
+        Already have account?
+        <br>
+        <a class="signup-link" color="primary" routerLink="/login">
+          singin
+        </a>
+      </h4>
+    </form>
+  </div>
+</div>

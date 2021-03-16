@@ -1,0 +1,11 @@
+mat-icon{
+  height: 20px !important;
+  width: 20px !important;
+}
+
+.sub-content{
+  margin-top: 20px;
+}
+.sub-content a{
+  margin-right: 15px;
+}

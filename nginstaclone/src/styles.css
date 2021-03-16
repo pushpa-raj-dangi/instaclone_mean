@@ -1,0 +1,173 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+
+html,
+body {
+  height: auto;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  /* background-color: rebeccapurple; */
+}
+
+.d-flex {
+  display: flex;
+}
+
+
+.align-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.mr-3 {
+  margin-right: 15px;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.center {
+  justify-content: center;
+}
+
+.mb-2 {
+  margin-bottom: 15px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.logo {
+  font-family: 'Grand Hotel', cursive;
+  font-size: 40px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mx-4 {
+  margin: 0px 200px !important;
+  width: 100%;
+  display: flex !important;
+}
+
+.px-2 {
+  padding: 0px 10px;
+}
+
+.w-100 {
+  width: 100%
+}
+
+.content {
+  width: 60%;
+}
+
+.sidebar {
+  width: 40%;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+
+
+.my-2 {
+  margin: 20px 0px !important;
+}
+
+.py-2 {
+  padding: 15px 0px;
+}
+
+.p-0 {
+  padding: 0px;
+}
+
+.warning {
+  background-color: #c5a239 !important;
+}
+
+.p-2 {
+  padding: 10px 10px;
+}
+
+
+.boder-0 {
+  border: 0px !important;
+}
+
+
+.w-50 {
+  width: 50%;
+}
+
+textarea {
+  resize: none !important;
+}
+
+
+.m-auto {
+  margin: auto;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  height: 0px !important;
+  display: none;
+}
+
+input:-internal-autofill-selected {
+  -webkit-appearance: menulist-button;
+  background-color: transparent !important;
+  background-image: none !important;
+  color: -internal-light-dark-color(black, white) !important;
+}
+
+
+.cdk-overlay-dark-backdrop {
+  background: #00000080 !important;
+}
+
+
+mat-dialog-container {
+  width: 500px !important;
+}
+
+
+
+input[type="file"] {
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  cursor: pointer;
+}

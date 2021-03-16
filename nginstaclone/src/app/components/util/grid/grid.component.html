@@ -1,0 +1,30 @@
+<mat-grid-list class="grid ml-auto" cols="3" gutterSize="15">
+     <span *ngIf="posts">
+    <mat-grid-tile *ngFor="let data of posts">
+      <a class="w-100" [routerLink]="'/comment/'+[data._id]">
+        <img [src]="data.photo" alt="">
+      </a>
+    </mat-grid-tile>
+  </span>
+  <!-- <span *ngIf="myposts">
+    <span *ngIf="myposts.length===0">User don't have any post yet.</span>
+    <mat-grid-tile *ngFor="let data of myposts ">
+      <a class="w-100" [routerLink]="'/comment/'+[data._id]">
+        <img [src]="data.photo" alt="">
+      </a>
+    </mat-grid-tile>
+  </span>
+  <div *ngIf="data">
+    <div *ngFor="let dt of data">
+    <span *ngIf="data.length===0">User don't have any post yet.</span>
+      <mat-grid-tile>
+        <a class="w-100" [routerLink]="'/comment/'+[dt._id]">
+          <div>
+            <img [src]="dt.photo" alt="">
+          </div>
+        </a>
+      </mat-grid-tile>
+    </div>
+  </div> -->
+
+</mat-grid-list>

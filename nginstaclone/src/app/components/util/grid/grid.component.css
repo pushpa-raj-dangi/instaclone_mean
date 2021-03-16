@@ -1,0 +1,5 @@
+.grid img{
+  width: 290px !important;
+  height: 290px;
+  object-fit: cover;
+}

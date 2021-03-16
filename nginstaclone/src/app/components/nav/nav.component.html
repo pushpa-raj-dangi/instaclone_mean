@@ -1,0 +1,56 @@
+
+
+<mat-toolbar  color="secondary" class="navbar">
+  <mat-toolbar-row>
+    <section class="mx-4">
+      <a routerLink="/" class="logo">Instaclone</a>
+      <div class="spacer"></div>
+      <form class="example-form">
+        <input class="border-radius" type="text" placeholder="Search..." [formControl]="myControl"
+        [matAutocomplete]="auto">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option.user.name">
+            <a [routerLink]="'/'+[option.user.name]" class="d-flex align-center">
+              <img class="option-img mr-3" [style.background]="'url('+option.user.img+')'">
+
+              {{option.user.name}}
+            </a>
+          </mat-option>
+        </mat-autocomplete>
+      </form>
+
+
+      <div class="spacer"></div>
+      <a mat-button routerLink="/">
+        <mat-icon aria-hidden="false" height="40px" width="40px" aria-label="Example home icon" color="primary">home
+        </mat-icon>
+      </a>
+      <button mat-button>
+        <div mat-card-avatar style="height:40px; width:40px;border-radius: 50%;" class="header-image"
+          [style.background]="user.img ? 'url('+user.img+')':'url('+'assets/img/default.png'+')'" mat-icon-button [matMenuTriggerFor]="menu" aria-label="more"></div>
+        <mat-menu #menu="matMenu">
+          <a routerLink="/login">
+            <button (click)="logout()" mat-menu-item>
+              <mat-icon>logout</mat-icon>
+              <span>Logout</span>
+            </button>
+          </a>
+          <a routerLink="/my-profile">
+            <button mat-menu-item>
+              <mat-icon>person</mat-icon>
+              <span>Profile</span>
+            </button>
+          </a>
+
+          <a (click)="openDialog()">
+            <button mat-menu-item>
+              <mat-icon>post_add</mat-icon>
+              <span>Create post</span>
+            </button>
+          </a>
+
+        </mat-menu>
+      </button>
+    </section>
+  </mat-toolbar-row>
+</mat-toolbar>

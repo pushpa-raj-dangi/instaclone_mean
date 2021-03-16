@@ -1,0 +1,34 @@
+<div class="container">
+  <ng-container *ngIf="isVisible; else elseTemplate">
+    <mat-spinner class="m-auto"></mat-spinner>
+  </ng-container>
+  <ng-template #elseTemplate>
+    <mat-card #another class="comment-detail">
+      <div class="card-1">
+        <img [src]="post?.photo">
+      </div>
+      <div class="comment">
+        <div class="d-flex align-center">
+          <mat-card-header class="p-2">
+            <div mat-card-avatar class="header-image" [style.background]="'url('+post?.photo+')'"></div>
+            <mat-card-title>{{postedBy.name}}</mat-card-title>
+          </mat-card-header>
+          <mat-card-header>
+            <mat-card-title>following</mat-card-title>
+          </mat-card-header>
+        </div>
+
+        <mat-divider [inset]="true"></mat-divider>
+        <div class="comment-p">
+          <app-comments [p]="post"></app-comments>
+        </div>
+        <div class="p-2 like">
+          <app-like [p]="post"></app-like>
+          <mat-divider class="w-100" [inset]="true"></mat-divider>
+        </div>
+      </div>
+    </mat-card>
+    <h4 class="mat-h4" color="primary"  class="my-2 mx-2">More post from {{postedBy.name }}</h4>
+    <app-grid [p]="post" [id]="postedBy._id"></app-grid>
+  </ng-template>
+</div>

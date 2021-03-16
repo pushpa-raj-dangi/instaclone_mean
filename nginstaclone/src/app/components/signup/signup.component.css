@@ -1,0 +1,32 @@
+mat-form-field{
+  width: 80% !important;
+  margin-left: 10%;
+}
+
+.box {
+  margin: auto;
+  width: 30%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 35px 0px 10px 0px;
+}
+
+.mat-form-field-underline {
+  height: 1px !important;
+}
+
+.link {
+  text-align:center;
+  color: rgb(20, 10, 10) !important;
+  font-weight: 400 !important;
+}
+
+.signup-link{
+  color: blue;
+  margin-top: 5px;
+}
+
+.logo{
+  text-align: center;
+  padding-bottom: 20px
+}

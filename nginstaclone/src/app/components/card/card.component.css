@@ -1,0 +1,22 @@
+.example-header-image {
+  background-size: cover !important;
+}
+
+.comment {
+  max-height: 80px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+
+
+.my-card {
+  margin-bottom: 30px;
+}
+
+ .mat-form-field-appearance-legacy .mat-form-field-underline{
+  height: 0px !important;
+  }
+

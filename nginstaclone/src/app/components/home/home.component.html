@@ -1,0 +1,17 @@
+<div class="container d-flex">
+  <div class="content">
+    <mat-spinner *ngIf="isVisible" class="m-auto"></mat-spinner>
+    <mat-card *ngIf="error" style="padding: 20px;">
+      <mat-card-subtitle class="mat-3" color="primary">Cannot fetch data {{error}}</mat-card-subtitle>
+      <button mat-raised-button color="primary">Retry</button>
+    </mat-card>
+    <div *ngFor="let post of posts">
+      <app-card [p]="post" [error]="error">
+      </app-card>
+    </div>
+
+  </div>
+  <div class="sidebar">
+    <app-sidebar></app-sidebar>
+  </div>
+</div>

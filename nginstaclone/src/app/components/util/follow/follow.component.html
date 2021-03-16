@@ -1,0 +1,20 @@
+
+<button mat-flat-button color="primary" (click)="following ? unFollow() : follow()">
+  <ng-container *ngIf="!following; else elseTemplate">
+    <mat-icon>person_add</mat-icon>
+    follow
+  </ng-container>
+  <ng-template #elseTemplate>
+    <mat-icon>
+      person_remove
+    </mat-icon>
+    following
+  </ng-template>
+</button>
+
+<div *ngIf="posts" class="sub-content">
+  <a class="mat-h3" color="primary">{{posts.length}} post</a>
+  <a class="mat-h3" color="primary">{{followers.length}} followers</a>
+  <a class="mat-h3" color="primary">{{user.following.length}} following</a>
+</div>
+

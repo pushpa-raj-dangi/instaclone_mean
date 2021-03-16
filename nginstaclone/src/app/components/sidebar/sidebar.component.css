@@ -1,0 +1,22 @@
+.header-image {
+  background-size: cover !important;
+}
+
+.my-image {
+  width: 60px !important;
+  height: 60px !important;
+  background-size: cover !important;
+}
+
+.sidebar-wrapper {
+  position: sticky;
+  top: 100px;
+  margin: 100px 30px;
+}
+
+
+.sidebar-wrapper .mat-card-title {
+  color: #252323;
+  font-size: 20px;
+  font-weight: 400;
+}
