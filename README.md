@@ -13,7 +13,7 @@ InstaClone is a full-featured photo-sharing social media application inspired by
 <b>📲 Responsive Design:</b> Optimized for both desktop and mobile.
 
 ## Tech Stack
-<b>Frontend:</b> Angular 16, TypeScript, HTML, SCSS <br/>
+<b>Frontend:</b> Angular 9, TypeScript, Angular Material, HTML ,CSS <br/>
 <b>Backend:</b> Node.js, Express.js <br/>
 </b>Database:</b> MongoDB <br/>
 <b>Authentication:</b> JWT (JSON Web Tokens) <br/>
