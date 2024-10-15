@@ -18,5 +18,4 @@ InstaClone is a full-featured photo-sharing social media application inspired by
 </b>Database:</b> MongoDB <br/>
 <b>Authentication:</b> JWT (JSON Web Tokens) <br/>
 <b>File Uploads:</b> Multer <br/>
-<b>Real-Time:</b> Socket.io for notifications <br/>
 <b>Cloud Storage:</b> Cloudinary (Optional for image hosting) <br/>
