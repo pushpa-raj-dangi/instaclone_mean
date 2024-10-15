@@ -10,7 +10,6 @@ InstaClone is a full-featured photo-sharing social media application inspired by
 <b>📰 News Feed: </b>View posts from followed users.<br/>
 <b>❤️ Engagement: </b>Like and comment on posts.<br/>
 <b>👥 Follow System: </b>Follow/unfollow other users.<br/>
-<b>📲 Responsive Design:</b> Optimized for both desktop and mobile.
 
 ## Tech Stack
 <b>Frontend:</b> Angular 9, TypeScript, Angular Material, HTML ,CSS <br/>
