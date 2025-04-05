@@ -18,3 +18,5 @@ InstaClone is a full-featured photo-sharing social media application inspired by
 <b>Authentication:</b> JWT (JSON Web Tokens) <br/>
 <b>File Uploads:</b> Multer <br/>
 <b>Cloud Storage:</b> Cloudinary (Optional for image hosting) <br/>
+
+[By me Coffee](https://ko-fi.com/codewithpushpa)
